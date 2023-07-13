@@ -5,7 +5,6 @@ pipeline {
             steps{
                 sh "touch build.sh"
                 echo "echo 'stage: Build' > build.sh"
-                sh "chmod +x build.sh"
                 sh "sh build.sh"
             }
         }
