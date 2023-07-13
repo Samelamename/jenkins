@@ -4,7 +4,7 @@ pipeline {
         stage('Pipeline stage Build'){
             steps{
                 sh "touch build.sh"
-                sh "echo \'!#/bin/bash stage: Build\' > build.sh"
+                echo "echo \'!#/bin/bash stage: Build\' > build.sh"
                 sh "chmod +x build.sh"
                 // sh "./build.sh"
             }
