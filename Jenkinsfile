@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Pipeline stage Build'){
             steps{
-                sh "touch build.sh"
-                echo "echo 'stage: Build' > build.sh"
+                sh "touch build.sh" || true
+                echo "echo 'stage: Build' >> build.sh"
                 sh "bash build.sh"
             }
         }
