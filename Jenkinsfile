@@ -5,7 +5,7 @@ pipeline {
             steps{
                 sh "touch build.sh"
                 echo "echo 'stage: Build' > build.sh"
-                sh "sh build.sh"
+                sh "bash build.sh"
             }
         }
         stage('Pipeline stage Test'){
