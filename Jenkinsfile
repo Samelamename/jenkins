@@ -4,9 +4,9 @@ pipeline {
         stage('Pipeline stage Build'){
             steps{
                 sh "touch build.sh"
-                sh "echo 'echo \"stage: Build\"' >> build.sh"
-                echo "cat build.sh"
-                sh "bash build.sh"
+                sh "echo \"echo 'stage- Build'\" > build.sh " 
+                sh "chmod +x build.sh"
+                sh "./build.sh"
             }
         }
         stage('Pipeline stage Test'){
